@@ -1,0 +1,28 @@
+{
+  "name": "fuse-box-demo",
+  "version": "1.0.0",
+  "description": "Branch for testing and debugging fuse-box tasks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rs3d/fuse-box-demo.git"
+  },
+  "keywords": [
+    "fuse-box",
+    "demo",
+    "typescript"
+  ],
+  "author": "Robin Schmitz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rs3d/fuse-box-demo/issues"
+  },
+  "homepage": "https://github.com/rs3d/fuse-box-demo#readme",
+  "devDependencies": {
+    "fuse-box": "2.2.1-beta.14",
+    "node-sass": "^4.5.3"
+  }
+}
