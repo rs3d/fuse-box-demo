@@ -30,7 +30,9 @@ const fuse = FuseBox.init({
   },
   standalone: true,
   plugins: [
-    WebIndexPlugin()
+    WebIndexPlugin({
+      path: '.'
+    })
   ]
 });
 
@@ -45,8 +47,8 @@ Sparky.task("default", () => {
         outFile: '' // needs to be empty to be in the same folder as created css file
       }),
       CSSPlugin({
-        inject: true,
-        outFile: file => path.join(distPath, `app.css`)
+        inject: file => `app.css`,
+        outFile: file => `${distPath}/app.css`,
       }),
     ])
     .plugin('.html',
@@ -56,7 +58,8 @@ Sparky.task("default", () => {
     .watch()
     .hmr();
   fuse.dev({
-    open: true
+    open: 'http://localhost:4444/build/scripts/',
+    root: '.'
   });
   fuse
     .run();

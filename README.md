@@ -8,7 +8,25 @@ Run `node fuse`
 
 This will start the dev-server on localhost:4444, compile the files and watch for file changes.
 
+Open `http://localhost:4444/build/scripts/` in your browser
+
 ## Issues
+- CSS is only injected on first load; Changes to the css are not injected without reloading.
+
+
+
+## Suggestions
+- Option to open a specific url `fuse.dev({
+    open: 'http://localhost:4444/build/scripts/',
+    root: '.'
+  });` 
+
+
+
+
+
+
+#### OLD
 - The api loader tries to load `index.css` although `outFile: file => path.join(distPath, 'app.css')` is configured.
 - If I use ```CSSPlugin({
         inject: file => `${distPath}/app.css`,
